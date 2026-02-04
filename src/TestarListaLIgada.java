@@ -1,39 +1,48 @@
+import java.util.Stack;
+
 public class TestarListaLIgada {
     public static void main(String[] args) {
 
         ListaLigada lista = new ListaLigada();
 
+
+
+
+
         System.out.println(lista);
 
-        lista.adicionaNoComeco("mauricio");
+        lista.adicionaNoComeco("Mauricio");
         System.out.println(lista);
 
-        lista.adicionaNoComeco("paulo");
+        lista.adiciona("Cecília");
         System.out.println(lista);
 
-        lista.adicionaNoComeco("guilherme");
+        lista.adiciona("João");
         System.out.println(lista);
 
-        lista.adiciona("Marcelo");
-        System.out.println(lista);
 
-        lista.adiciona(2, "gabriel");
-        System.out.println(lista);
+        System.out.println(lista.contem("Mauricio"));
+        System.out.println(lista.contem("Danilo"));
 
-        Object x = lista.pega(2);
-        System.out.println(x);
 
-        System.out.println(lista.tamanho());
 
-        lista.removeDoComeco();
-        System.out.println(lista);
 
-        lista.removeDoFim();
-        System.out.println(lista);
+        Stack<String> stack = new Stack<String>();
 
-        lista.remove(1);
-        System.out.println(lista);
+        stack.push("Mauricio");
+        stack.push("Marcelo");
 
-        System.out.println("Contem Marcelo? " + lista.contem("Marcelo"));
+        System.out.println(stack);
+        stack.pop();
+        System.out.println(stack);
+
+        String nome = stack.peek();
+        System.out.println(nome);
+
+
+
+
+
+
     }
 }

@@ -31,6 +31,8 @@ public class ListaLigada {
         totalDeElementos++;
     }
 
+
+
     public void adiciona(int posicao, Object elemento) {
         if (posicao < 0 || posicao > totalDeElementos) {
             throw new IllegalArgumentException("posicao invalida");
@@ -125,13 +127,13 @@ public class ListaLigada {
         return totalDeElementos;
     }
 
-    public boolean contem(Object o) {
+    public boolean contem(Object elemento) {
         Celula atual = primeira;
         while (atual != null) {
-            if (o == null) {
+            if (elemento == null) {
                 if (atual.getElemento() == null) return true;
             } else {
-                if (o.equals(atual.getElemento())) return true;
+                if (elemento.equals(atual.getElemento())) return true;
             }
             atual = atual.getProximo();
         }
@@ -141,6 +143,7 @@ public class ListaLigada {
     private boolean posicaoOcupada(int posicao) {
         return posicao >= 0 && posicao < totalDeElementos;
     }
+
 
     private Celula pegaCelula(int posicao) {
         if (!posicaoOcupada(posicao)) {
@@ -163,6 +166,8 @@ public class ListaLigada {
         }
     }
 
+
+
     @Override
     public String toString() {
         if (totalDeElementos == 0) return "[]";
@@ -179,4 +184,6 @@ public class ListaLigada {
         sb.append("]");
         return sb.toString();
     }
+
+
 }

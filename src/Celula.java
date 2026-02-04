@@ -3,6 +3,7 @@ public class Celula {
     private Celula proximo;
     private Celula anterior;
 
+
     public Celula(Object elemento) {
         this(elemento, null);
     }
@@ -32,4 +33,9 @@ public class Celula {
     public void setAnterior(Celula anterior) {
         this.anterior = anterior;
     }
+
+
+
+
+
 }
